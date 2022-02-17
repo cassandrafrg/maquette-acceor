@@ -191,7 +191,8 @@ h5 {
 
 .article6 {
     margin-top: 95px;
-    margin-right: 100px;
+    margin-right: auto;
+    margin-left:auto;
 }
 
 .article6 section{
@@ -215,24 +216,28 @@ h5 {
 }
 
 .article6 section img {
-    width: 480px;
-    padding-bottom: 30px;
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 .article6 section div {
-    padding: 15px;
-    margin-top: -220px;
+    padding: 30px 15px 0px 15px;
+    margin-top: 0px;
 }
 
 .article6 section > div:first-child {
     margin-left: 90px;
 }
 
+.slider {
+    margin-top: -300px;
+}
 footer {
     margin-top: 85px;
     background-color: rgb(218, 0, 29);
     color: white;
     font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
 footer article {
@@ -240,13 +245,22 @@ footer article {
 }
 
 footer article section {
-    padding: 50px 0px 100px 80px;
+    padding: 50px 0px 60px 90px;
     width: 33%;
 }
 
 footer article section div button {
     border: 2px solid #fff;
     padding: 15px 30px 15px 30px;
+}
+
+footer article section:nth-child(3) table tr td {
+    padding:15px;
+}
+
+footer article section:nth-child(3) table tr td a{
+    color: white;
+    text-decoration: none;
 }
 
 .fa-adn {
@@ -271,7 +285,14 @@ footer article section div button {
     color: white;
     font-size: 15px;
     padding: 10px 13px 10px 13px;
+    margin-right: 10px;
     border-radius:30px;
+    transition: background-color 1s;
+}
+
+.fa-chevron-right:hover {
+    color:rgb(218, 0, 29);
+    background-color:rgb(255, 255, 255)
 }
 
 .brand {
@@ -290,6 +311,26 @@ button {
     color:white;
     border:none;
     border-radius: 30px;
+    transition: background-color 1s;
+}
+
+button:hover {
+    color:rgb(218, 0, 29);
+    background-color:rgb(255, 255, 255)
+}
+
+.footer-btn {
+    background-color: white;
+    color:rgb(218, 0, 29);
+    padding: 5px 7px 5px 7px;
+    margin-right: 10px;
+    font-size: 10px;
+    transition: background-color 1s;
+}
+
+.footer-btn:hover {
+    background-color: rgb(218, 0, 29);
+    color:white;
 }
 
 .bold {
@@ -304,4 +345,48 @@ button {
 
 .red .dot {
     font-size: 60px;
+}
+
+@media screen and (min-width: 960px) {
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 960px) {
+    .section1 {
+        justify-content:center;
+    }
+
+    .section1 img {
+        float: center;
+    }
+    .section1, .article1, .article2, .article3, .article4, .article5, .article6 section, footer{
+        flex-direction: column;
+    }
+
+    .article1 section{
+        width: 100%;
+    }
+
+    .article2 section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .article3 section{
+        margin-bottom: 30px;
+    }
+
+    .article4 section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .article5 div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Mettre ici les différentes règles concernées */
 }
