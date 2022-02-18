@@ -1,39 +1,60 @@
 .navbar {
     height: 85px;
     font-family: 'Lato', sans-serif;
+    background-color: white;
+}
+
+.navbar-nav {
+    justify-content: space-between;
+    margin: 0px 0px 0px 244px;
+}
+
+#navbarNavAltMarkup div:nth-child(2)  {
+    background-color:rgb(218, 0, 29);
+    border-radius: 30px 0 0 30px;
+    margin-right: -15px;
+    width: 430px;
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#navbarNavAltMarkup div:nth-child(2) a {
+    text-decoration: none;
+    color:white;
 }
 
 .navbar-brand {
-    margin-left: 100px;
+    margin-left: 70px;
     font-size: 35px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    margin: 0 35px 0 0;
-    font-size: 15px;
-    color: black;
-    font-weight: bold;
+.navbar-brand i {
+    color: rgb(218, 0, 29);
+    font-size: 45px;
     transition: background-color 1s ease-out 100ms;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-    color: white;
-    background-color:rgb(218, 0, 29);
+.navbar-light .navbar-nav a {
+    margin: 0 35px 0 0;
+    font-size: 15px;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 1s ease-out 100ms;
+    border-radius: 35px;
 }
 
-.nav-item:last-child{
-    background-color:rgb(218, 0, 29);
-    border-radius: 30px;
-    padding-right: 8rem;
-    margin-right: -15px;
-} 
-
-.navbar-nav .nav-item:last-child .nav-link{
+.navbar-nav a:hover {
     color: white;
-    font-size: 14px;
-    padding-left: 20px;
-    font-weight: normal;
+    background-color:rgb(218, 0, 29);
+    border-radius: 35px;
+    padding: 10px;
 }
 
 main {
@@ -90,12 +111,12 @@ h5 {
 
 .section1 div:first-child {
     padding: 100px;
-    padding-top: 100px;
+    width: 100%;
 }
 
 .section1 img{
-    width: 600px;
-    float: right;    
+    width: 100%;
+    /* float: right;     */
 }
 
 .section1 span{
@@ -141,7 +162,7 @@ h5 {
 }
 
 .article3 img {
-    width: 700px;
+    width: 100%;
 }
 
 .article3 section:nth-child(2){
@@ -177,16 +198,21 @@ h5 {
     display: flex;
     margin-top: 95px;
     background-color: rgb(247, 247, 247);
-    padding: 80px;
-    margin: 95px 95px 95px 95px;
+    padding: 100px;
+    margin: 95px 50px 95px 50px;
 }
 
 .article5 img {
-    width: 350px;
+    width: 100%;
 } 
 
 .article5 > div {
-    width: 50%;
+    width: 30%;
+}
+
+.article5 > div:nth-child(2) {
+    width: 60%;
+    margin-top:20px;
 }
 
 .article6 {
@@ -225,13 +251,10 @@ h5 {
     margin-top: 0px;
 }
 
-.article6 section > div:first-child {
-    margin-left: 90px;
-}
-
 .slider {
     margin-top: -300px;
 }
+
 footer {
     margin-top: 85px;
     background-color: rgb(218, 0, 29);
@@ -267,6 +290,7 @@ footer article section:nth-child(3) table tr td a{
     font-size: 45px;
     color: rgb(218, 0, 29);
 }
+
 
 .fa-user-plus, .fa-stopwatch, .fa-wallet {
     color: rgb(218, 0, 29);
@@ -343,28 +367,49 @@ button:hover {
     text-decoration: none;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
 .red .dot {
     font-size: 60px;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 480px) and (max-width: 990px) {
 
-}
+    .navbar-brand {
+        margin-left: 30px;
+    }    
+    #navbarNavAltMarkup {
+        background-color: white;
+    }
 
-@media screen and (min-width: 480px) and (max-width: 960px) {
+    #navbarNavAltMarkup div:nth-child(2){
+        width: 990px;
+    }
+
+    #navbarNavAltMarkup .navbar-nav {
+        margin-left: 0;
+    }
     .section1 {
         justify-content:center;
     }
 
     .section1 img {
-        float: center;
+        width: 90%;
     }
-    .section1, .article1, .article2, .article3, .article4, .article5, .article6 section, footer{
+    .section1, .article1, .article2, .article3, .article4, .article5, .article6 section, footer article{
         flex-direction: column;
     }
 
     .article1 section{
-        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
     }
 
     .article2 section {
@@ -376,6 +421,9 @@ button:hover {
         margin-bottom: 30px;
     }
 
+    .article3 img {
+        width: 90%;
+    }
     .article4 section {
         width: 100%;
         margin-bottom: 30px;
@@ -383,10 +431,130 @@ button:hover {
 
     .article5 div {
         width: 100%;
-        margin-bottom: 30px;
+    }
+
+    .article5 > div:nth-child(2){
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    footer article section{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;    
+        padding: 25px 50px 20px 50px;
+    }
+
+    footer article section:nth-child(2) {
+        text-align: center;
+    }
+
+    footer article section:nth-child(3) table, footer article section:nth-child(3) div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 200px; */
     }
 }
 
 @media screen and (max-width: 480px) {
-    /* Mettre ici les différentes règles concernées */
+
+    .navbar-brand {
+        margin-left: 30px;
+    }    
+
+    #navbarNavAltMarkup {
+        background-color: white;
+    }
+
+    #navbarNavAltMarkup div:nth-child(2){
+        width: 480px;
+    }
+
+    #navbarNavAltMarkup .navbar-nav {
+        margin-left: 0;
+    }
+
+    .section1 {
+        justify-content:center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section1 div:first-child {
+        padding: 50px;
+    }   
+
+    .article2 {
+        padding: 25px;
+    }
+    .article2 section {
+        padding: 50px 30px 50px 30px;
+    }
+    .section1 img {
+        width: 90%;
+    }
+    .section1, .article1, .article2, .article3, .article4, .article5, .article6 section, footer article{
+        flex-direction: column;
+    }
+
+    .article1 section{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .article2 section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .article3 section{
+        margin-bottom: 30px;
+    }
+
+    .article3 img {
+        width: 90%;
+    }
+
+    .article3 section:nth-child(2){
+        padding-left: 40px;
+    }
+    
+    .article4 section {
+        width: 100%;
+        margin-bottom: 30px;
+        padding-left: 50px;
+    }
+
+    .article5 {
+        padding: 50px 30px 50px 30px;
+        margin: 50px 30px 50px 30px;
+    }
+
+    .article5 div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    footer article section{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;    
+        padding: 25px 50px 20px 50px;
+    }
+
+    footer article section:nth-child(2) {
+        text-align: center;
+    }
+
+    footer article section:nth-child(3) table, footer article section:nth-child(3) div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+
 }
